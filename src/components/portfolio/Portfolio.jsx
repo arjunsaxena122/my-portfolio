@@ -27,29 +27,33 @@ const data = [
     Image: IMG3,
     title: "Responsive Bootstrap",
     github: "https://github.com/soulpredator0/bootstrap-website",
-    demo: "https://soulpredator0.github.io/bootstrap-website/",
-  },
+    demo: "https://soulpredator0.github.io/bootstrap-website/"
+  }
+]
+
+const data2=[
   {
-    id: 4,
+    id: 1,
     Image: IMG4,
     title: "Tic Tac Toe",
     github: "https://github.com/soulpredator0/tic-tac-toe",
     demo: "https://soulpredator0.github.io/tic-tac-toe/",
   },
   {
-    id: 5,
+    id: 2,
     Image: IMG5,
     title: "Todo App",
     github: "https://github.com/soulpredator0/React-Todo",
     demo: "https://react-todo-snowy-five.vercel.app",
   },
   {
-    id: 6,
+    id: 3,
     Image: IMG6,
     title: "Speech-Recogination",
     github: "https://github.com/soulpredator0/speech-recogination",
     demo: "https://speech-recogination-fynhzkmm9-soulpredator0.vercel.app/",
-  }
+  },
+
 ]
 
 const Portfolio = () => {
@@ -60,25 +64,51 @@ const Portfolio = () => {
       <div className="container portfolio_container">
         {
           data.map(({ id, Image, title, github, demo }) => {
-          return(
-            <article key={id} className="portfolio_item">
-            <div className="portfolio_item-image">
-              <img src={Image} alt={title} />
-            </div>
-            <h3>{title}</h3>
-            <div className="portfolio_item-cta">
-              <a href={github} className="btn" target="_blank">
-                Github
-              </a>
-              <a
-                href={demo}
-                className="btn btn-primary"
-                target="_blank">
-                Live Project
-              </a>
-            </div>
-          </article>
-          )
+            return (
+              <article key={id} className="portfolio_item">
+                <div className="portfolio_item-image">
+                  <img src={Image} alt={title} />
+                </div>
+                <h3>{title}</h3>
+                <div className="portfolio_item-cta">
+                  <a href={github} className="btn" target="_blank">
+                    Github
+                  </a>
+                  <a
+                    href={demo}
+                    className="btn btn-primary"
+                    target="_blank">
+                    Live Project
+                  </a>
+                </div>
+              </article>
+            )
+          })
+        }
+      </div>
+      <br/>
+      <div className="container portfolio_container_2">
+        {
+          data2.map(({ id, Image, title, github, demo }) => {
+            return (
+              <article key={id} className="portfolio_item_2">
+                <div className="portfolio_item-image_2">
+                  <img src={Image} alt={title} />
+                </div>
+                <h3>{title}</h3>
+                <div className="portfolio_item-cta_2">
+                  <a href={github} className="btn" target="_blank">
+                    Github
+                  </a>
+                  <a
+                    href={demo}
+                    className="btn btn-primary"
+                    target="_blank">
+                    Live Project
+                  </a>
+                </div>
+              </article>
+            )
           })
         }
       </div>
